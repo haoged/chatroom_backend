@@ -14,6 +14,8 @@ var echo = require('socket.io')(httpServer, {
     }
 });
 
+echo.origins("*");
+
 echo.on('connection', connection => {
     connection.on('message', message => {
         console.log('a user connected!');
