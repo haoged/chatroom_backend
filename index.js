@@ -1,7 +1,5 @@
-import express from 'express';
-app = express();
 const http = require('http');
-const httpServer = http.createServer(app);
+const httpServer = http.createServer();
 var echo = require('socket.io')(httpServer, {
     handlePreflightRequest: (req, res) => {
         const headers = {
@@ -14,7 +12,7 @@ var echo = require('socket.io')(httpServer, {
     }
 });
 
-echo.origins("*");
+echo.origins('localhost:3000');
 
 echo.on('connection', connection => {
     connection.on('message', message => {
