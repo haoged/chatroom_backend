@@ -1,5 +1,7 @@
+import express from 'express';
+app = express();
 const http = require('http');
-const httpServer = http.createServer();
+const httpServer = http.createServer(app);
 var echo = require('socket.io')(httpServer, {
     handlePreflightRequest: (req, res) => {
         const headers = {
