@@ -1,0 +1,12 @@
+{
+  "name": "socketio_app",
+  "version": "1.0.0",
+  "description": "socketio_backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node index.js"
+  },
+  "author": "Jack Deng",
+  "license": "ISC"
+}
