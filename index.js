@@ -23,7 +23,7 @@ echo.on('connection', connection => {
 
 });
 
-httpServer.listen(process.env.PORT || 9999);
+httpServer.listen(process.env.PORT || 3001);
 
 // const http = require('http');
 
