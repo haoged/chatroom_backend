@@ -4,13 +4,13 @@ const http = require('http');
 const httpServer = http.Server(app);
 var echo = require('socket.io')(httpServer);
 
-//echo.origins('*:*');
-echo.origins((origin, callback) => {
-    if (origin !== 'http://localhost:3000') {
-      return callback('origin not allowed', false);
-    }
-    callback(null, true);
-  });
+echo.origins('*:*');
+// echo.origins((origin, callback) => {
+//     if (origin !== 'http://localhost:3000') {
+//       return callback('origin not allowed', false);
+//     }
+//     callback(null, true);
+//   });
 
 echo.on('connection', connection => {
     connection.on('message', message => {
