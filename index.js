@@ -1,5 +1,7 @@
+const express = require('express');
+const app = express();
 const http = require('http');
-const httpServer = http.createServer();
+const httpServer = http.Server(app);
 var echo = require('socket.io')(httpServer);
 
 //echo.origins('*:*');
