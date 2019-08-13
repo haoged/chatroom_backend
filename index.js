@@ -12,7 +12,7 @@ var echo = require('socket.io')(httpServer, {
     }
 });
 
-echo.origins('localhost:3000');
+echo.origins('*:*');
 
 echo.on('connection', connection => {
     connection.on('message', message => {
